@@ -17,7 +17,7 @@
       return;
     }
 
-    // ✅ Use for loop instead of map
+  
     let passwordArray = [];
     for (let i = 0; i < selectedSets.length; i++) {
       let set = selectedSets[i];
@@ -25,14 +25,13 @@
       passwordArray.push(set[randomIndex]);  // Pick one random char from each set
     }
 
-    // Fill remaining length with random characters
     const allChars = selectedSets.join("");
     while (passwordArray.length < length) {
       const randomIndex = Math.floor(Math.random() * allChars.length);
       passwordArray.push(allChars[randomIndex]);
     }
 
-    // Shuffle the password so guaranteed chars don’t always appear at start
+    
     passwordArray = passwordArray.sort(() => Math.random() - 0.5);
 
     document.getElementById("password").value = passwordArray.join("");
@@ -48,4 +47,5 @@
       .then(() => alert("Password copied to clipboard!"))
       .catch(() => alert("Failed to copy password!"));
   }
+
 
