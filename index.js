@@ -1,7 +1,5 @@
 let getpassword = document.querySelector(".get-password");
-getpassword.addEventListener("click", generatePassword());
-
-function generatePassword() {
+getpassword.addEventListener("click", () => {
     const length = parseInt(document.getElementById("length").value);
     const upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     const lower = "abcdefghijklmnopqrstuvwxyz";
@@ -37,7 +35,7 @@ function generatePassword() {
     passwordArray = passwordArray.sort(() => Math.random() - 0.5);
 
     document.getElementById("password").value = passwordArray.join("");
-  }
+  });
 
   function copyPassword() {
     const passwordField = document.getElementById("password");
