@@ -1,4 +1,6 @@
 let getpassword = document.querySelector(".get-password");
+let copypass = document.querySelector(".copypass");
+
 getpassword.addEventListener("click", () => {
     const length = parseInt(document.getElementById("length").value);
     const upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -37,7 +39,7 @@ getpassword.addEventListener("click", () => {
     document.getElementById("password").value = passwordArray.join("");
   });
 
-  function copyPassword() {
+  copypass.addEventListener("click", () => {
     const passwordField = document.getElementById("password");
     if (!passwordField.value) {
       alert("No password to copy!");
@@ -46,6 +48,6 @@ getpassword.addEventListener("click", () => {
     navigator.clipboard.writeText(passwordField.value)
       .then(() => alert("Password copied to clipboard!"))
       .catch(() => alert("Failed to copy password!"));
-  }
+  });
 
 
