@@ -1,0 +1,32 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    height:100vh;
+    background: #f4f4f4;
+}
+.container{
+    background: white;
+    text-align: center;
+    width: fit-content;
+    border-radius: 0ch;
+    padding: auto;
+}
+button{
+    padding: auto;
+    border: 1px solid;
+    background: -moz-element();
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:hover{
+    background: wheat;
+}
+#password{
+    margin: 10px,0;
+    padding:8px;
+    width: 300px;
+    border: 1px,solid;
+    border-radius: 5px;
+}
