@@ -1,5 +1,7 @@
+let getpassword = document.querySelector(".get-password");
+getpassword.addEventListener("click", generatePassword());
 
-  function generatePassword() {
+function generatePassword() {
     const length = parseInt(document.getElementById("length").value);
     const upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     const lower = "abcdefghijklmnopqrstuvwxyz";
@@ -7,7 +9,7 @@
     const symbols = "!@#$%^&*()_+[]{}|;:,.<>?";
 
     let selectedSets = [];
-    if (document.getElementById("uppercase").checked) selectedSets.push(upper);
+    if (document.getElementById("uppercase").checked) selectedSets.push(upper);   
     if (document.getElementById("lowercase").checked) selectedSets.push(lower);
     if (document.getElementById("numbers").checked) selectedSets.push(numbers);
     if (document.getElementById("symbols").checked) selectedSets.push(symbols);
